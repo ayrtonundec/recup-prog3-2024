@@ -4,6 +4,7 @@ import {FullLayoutComponent} from "./layouts/full/full-layout.component";
 import {ContentLayoutComponent} from "./layouts/content/content-layout.component";
 import {PublicGuard} from "./auth/guards/public.guard";
 import { NuevoCursoComponent } from './cursos/nuevo-curso/nuevo-curso.component';
+import { MisCursosComponent } from './cursos/mis-cursos/mis-cursos.component';
 
 export const routes: Routes = [
   {
@@ -48,7 +49,12 @@ export const routes: Routes = [
         loadComponent: () => import('./profile/pages/my-profile/my-profile.component')
       },
 
-      { path: 'nuevo-curso', component: NuevoCursoComponent },
+      { path: 'nuevo-curso', component: NuevoCursoComponent 
+
+      },
+      {
+        path: 'mis-cursos', component: MisCursosComponent
+      },
       {
         path: '404',
         loadComponent: () => import('./shared/pages/error-page/error-page.component')

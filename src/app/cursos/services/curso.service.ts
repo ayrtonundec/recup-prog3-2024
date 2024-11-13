@@ -7,13 +7,13 @@ import { InterfaceCurso } from '../mis-cursos/interface/interface.curso';
   providedIn: 'root'
 })
 export class CursoService {
-  private apiUrl = 'http://localhost:3000/cursos';
+  [x: string]: any;
+  private url = 'http://localhost:3000/cursos';
 
   constructor(private http: HttpClient) {}
 
-  // Método para agregar un nuevo curso
   agregarCurso(curso: CursoService): Observable<CursoService> {
-    return this.http.post<CursoService>(this.apiUrl, curso);
+    return this.http.post<CursoService>(this.url, curso);
   }
 }
 
